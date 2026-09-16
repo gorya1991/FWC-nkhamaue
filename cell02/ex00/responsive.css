@@ -1,0 +1,4 @@
+table { border-collapse: collapse; width: 100%; }
+td { padding: 20px; }
+td:first-child { background-color: yellowgreen; }
+td:last-child { background-color: lightsalmon; }
