@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+  margin: 0;
+  padding: 30px;
+}
+.header {
+  text-align: center;
+}
+.card {
+  width: 300ppx;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0,2);
+}
+table {
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+}
+td {
+border: none;
+  text-align: center;
+  oadding: 6px;
+}
+.avatar {
+  width 100%;
+  display: block;
+}
+.login {
+  font-size: 26px;
+  font-weight: bo;d;
+  padding-top: 15px;
+}
+.desc {
+  color: #888888;
+  font-size: 15px;
+}
+.school {
+  font-size: 13px;
+}
+.social img {
+  width: 24px;
+  height: 24px;
+  margin: 0 6px;
+}
+.contact {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px; 
+  font-size: 16px;
+  cusor: pointer;
+}
+.contact:hover {
+  background-color: #333333;
+}
+  
+  
