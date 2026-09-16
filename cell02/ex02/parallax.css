@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.box, .box3 {
+  height: 100vh; 
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBE31BLAUu0olvnHoX702Kwiqhz8rlb1OWjnHQGlV7A&s=10");
+}
+
+.box3 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkcxTbgibs_EcEr5LJe9N6bGEnxmdNfe0hXKq-OdL0A&s=10");
+}
+
+.box2 {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 h1, .box2 h1, .box3 h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0,0,0,0,4);
+  border-radius: 10px;
+} 
