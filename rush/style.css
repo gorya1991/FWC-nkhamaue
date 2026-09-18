@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
+ 
+:root {
+  --bg: #EDEAE3;
+  --surface: #FFFFFF;
+  --ink: #1C1B19;
+  --muted: #6B675F;
+  --accent: #2A4B7C;
+  --accent-warm: #C9A227;
+  --border: #D9D5CB;
+ 
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+ 
+  --radius: 6px;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  /* กันเนื้อหาโดน nav แบบ fixed ทับตอนโหลดหน้า */
+  padding-top: 4rem;
+}
+ 
+img {
+  max-width: 100%;
+  display: block;
+}
+ 
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+ 
+a:hover {
+  text-decoration: underline;
+}
+ 
+a:focus-visible {
+  outline: 2px solid var(--accent-warm);
+  outline-offset: 3px;
+}
+ 
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.5em;
+}
+ 
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.05; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 2rem; }
+ 
+p {
+  max-width: 62ch;
+  color: var(--muted);
+}
+ 
+/* ---------- Navbar (ติดอยู่บนจอเสมอ ไม่ว่าจะเลื่อนไปตรงไหน) ---------- */
+ 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+  padding: 0.9rem clamp(1rem, 4vw, 3rem);
+  background: rgba(237, 234, 227, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+ 
+nav a {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+ 
+nav a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+ 
+/* ---------- Section เว้นระยะทั่วไป ---------- */
+ 
+section {
+  scroll-margin-top: 4.5rem;
+  padding: 5.5rem clamp(1.25rem, 6vw, 6rem);
+}
+ 
+/* ---------- #home ---------- */
+ 
+#home {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ 
+/* ---------- #about ---------- */
+ 
+#about img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--border);
+  margin: 1.25rem 0;
+}
+ 
+/* ---------- #showcase ---------- */
+ 
+#showcase {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+ 
+#showcase .box {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  max-width: 280px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 0 1.5rem 1.5rem 0;
+}
+ 
+#showcase .box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+ 
+#showcase .box p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+ 
+/* ---------- #contact ---------- */
+ 
+#contact p {
+  margin: 0.75rem 0;
+}
+ 
+#contact a {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+}
+ 
+#contact a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+ 
+/* ---------- หน้า Landing (index.html) ---------- */
+ 
+.Welcome {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+ 
+.cv-link {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
+.cv-link a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 2px 0 var(--border);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+ 
+.cv-link a:hover {
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 var(--accent-warm);
+}
+ 
+/* ---------- Responsive ---------- */
+ 
+@media (max-width: 640px) {
+  nav {
+    gap: 1rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+  }
+ 
+  section {
+    padding: 3.5rem 1.25rem;
+  }
+ 
+  #showcase .box {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
